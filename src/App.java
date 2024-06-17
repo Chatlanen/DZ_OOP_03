@@ -1,45 +1,15 @@
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import data.Student;
+import data.StudentGroup;
 
 public class App {
     private static List<Student> InitStudents() {
-        // List<String> names = Arrays.asList("Колесников Роберт Станиславович",
-        //         "Гусев Роман Платонович",
-        //         "Лаврентьев Ростислав Митрофанович",
-        //         "Уваров Гавриил Филиппович",
-        //         "Шестаков Пантелеймон Антонинович",
-        //         "Кондратьев Кассиан Митрофанович",
-        //         "Беспалов Варлаам Денисович",
-        //         "Жуков Илья Александрович",
-        //         "Степанов Касьян Вячеславович",
-        //         "Горшков Юстин Улебович",
-        //         "Васильев Абрам Романович",
-        //         "Рожков Аристарх Агафонович",
-        //         "Маслов Даниил Филиппович",
-        //         "Абрамов Давид Валентинович",
-        //         "Кудряшов Савелий Данилович",
-        //         "Рыбаков Любомир Эдуардович",
-        //         "Мамонтов Всеволод Владленович",
-        //         "Волков Тимур Онисимович",
-        //         "Калинин Устин Всеволодович",
-        //         "Рыбаков Роман Федорович",
-        //         "Зыков Родион Константинович",
-        //         "Борисов Вольдемар Евгеньевич",
-        //         "Котов Соломон Агафонович",
-        //         "Кулаков Архип Валерьевич",
-        //         "Никифоров Соломон Мэлсович");
-
-        // List<User> users = new ArrayList<>();
-
-        // for (String name : names) {
-        //     Long randomDay = ThreadLocalRandom.current().nextLong(LocalDate.of(2000, 1, 1).toEpochDay(),
-        //             LocalDate.of(2010, 12, 31).toEpochDay());
-        //     users.add(new User(name.split(" ")[1], name.split(" ")[0], name.split(" ")[2],
-        //             LocalDate.ofEpochDay(randomDay)));
-        // }
 
         List<Student> students = new ArrayList<>();
 
@@ -73,18 +43,14 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-        // List<User> lu = InitUsers();
-        // for (User user : lu) {
-        //     System.out.format("students.add(new Student( \"%s\",\"%s\",\"%s\",LocalDate.parse(\"%s\")));\n",
-        //             user.getFirstName(), user.getSecondName(), user.getPatronymic(), user.getDateOfBirth());
-        // }
-
-        // System.out.println(InitUsers());
-        // new StudentController()
-        // .sendOnConsole(List.of(new Student(1, "Sasha", "Ivanov"),
-        // new Student(1, "Ira", "Ivanova")));
-
         List<Student> students = InitStudents();
+        List<Student> students2 = students.subList(0, 5);
+
+            
+        System.out.println(students2);
+            
+        //StudentGroup studGroup_01 = ;
+
 
     }
 }
